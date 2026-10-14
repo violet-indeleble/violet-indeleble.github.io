@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">GTCM-Net 输入信噪比分层的归一化恢复误差</title>
+  <desc id="desc">依据论文表5。目标输入SNR区间负5到0、0到5、5到10、10到15、15到20dB，对应每种子案例数44、39、43、40、37；NRMSE中位数的跨5种子均值分别为0.38322、0.26260、0.21961、0.18224、0.10413，样本标准差分别为0.01072、0.00921、0.01013、0.00603、0.00674。每个区间左闭右开。误差线表示种子间样本标准差，共203个固定合成测试配对。</desc>
+  <defs>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #183d36; }
+      .title { font-size: 42px; font-weight: 700; }
+      .subtitle { font-size: 27px; fill: #526b62; }
+      .tick { font-size: 25px; fill: #526b62; }
+      .value { font-size: 29px; font-weight: 700; fill: #197565; }
+      .small { font-size: 24px; fill: #526b62; }
+      .grid { stroke: #dce6dc; stroke-width: 2; }
+      .error { stroke: #6956b4; stroke-width: 4; }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f8faf6"/>
+  <text x="60" y="70" class="title">低信噪比下，恢复误差仍然更高</text>
+  <text x="60" y="118" class="subtitle">输入 SNR 分层 · NRMSE 中位数（越低越好）</text>
+
+  <rect x="135" y="189" width="970" height="391" rx="18" fill="#ffffff"/>
+  <path d="M 160 570 H 1060 M 160 492.222 H 1060 M 160 414.444 H 1060 M 160 336.667 H 1060 M 160 258.889 H 1060" class="grid"/>
+  <path d="M 160 220 V 570 H 1060" fill="none" stroke="#7e9389" stroke-width="3"/>
+  <text x="140" y="578" text-anchor="end" class="tick">0.0</text>
+  <text x="140" y="500" text-anchor="end" class="tick">0.1</text>
+  <text x="140" y="423" text-anchor="end" class="tick">0.2</text>
+  <text x="140" y="345" text-anchor="end" class="tick">0.3</text>
+  <text x="140" y="267" text-anchor="end" class="tick">0.4</text>
+  <text x="160" y="172" class="small">归一化恢复误差</text>
+  <text x="1060" y="172" text-anchor="end" class="small">横轴：目标输入 SNR（dB）</text>
+
+  <path d="M 230 271.940 L 420 365.756 L 610 399.192 L 800 428.258 L 990 489.010" fill="none" stroke="#197565" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g class="error">
+    <path d="M 230 263.602 V 280.278 M 218 263.602 H 242 M 218 280.278 H 242"/>
+    <path d="M 420 358.592 V 372.919 M 408 358.592 H 432 M 408 372.919 H 432"/>
+    <path d="M 610 391.313 V 407.071 M 598 391.313 H 622 M 598 407.071 H 622"/>
+    <path d="M 800 423.568 V 432.948 M 788 423.568 H 812 M 788 432.948 H 812"/>
+    <path d="M 990 483.768 V 494.252 M 978 483.768 H 1002 M 978 494.252 H 1002"/>
+  </g>
+  <g fill="#197565" stroke="#ffffff" stroke-width="3">
+    <circle cx="230" cy="271.940" r="7"/>
+    <circle cx="420" cy="365.756" r="7"/>
+    <circle cx="610" cy="399.192" r="7"/>
+    <circle cx="800" cy="428.258" r="7"/>
+    <circle cx="990" cy="489.010" r="7"/>
+  </g>
+  <text x="230" y="236" text-anchor="middle" class="value">0.38322</text>
+  <text x="420" y="331" text-anchor="middle" class="value">0.26260</text>
+  <text x="610" y="364" text-anchor="middle" class="value">0.21961</text>
+  <text x="800" y="394" text-anchor="middle" class="value">0.18224</text>
+  <text x="990" y="455" text-anchor="middle" class="value">0.10413</text>
+
+  <g text-anchor="middle" class="tick">
+    <text x="230" y="607">[−5, 0)</text>
+    <text x="420" y="607">[0, 5)</text>
+    <text x="610" y="607">[5, 10)</text>
+    <text x="800" y="607">[10, 15)</text>
+    <text x="990" y="607">[15, 20)</text>
+  </g>
+  <g text-anchor="middle" class="small">
+    <text x="230" y="643">n = 44</text>
+    <text x="420" y="643">n = 39</text>
+    <text x="610" y="643">n = 43</text>
+    <text x="800" y="643">n = 40</text>
+    <text x="990" y="643">n = 37</text>
+  </g>
+  <text x="1090" y="607" class="small">dB</text>
+
+  <text x="60" y="697" class="small">每个区间先逐种子计算中位数，再跨 5 个种子取均值。</text>
+  <text x="60" y="735" class="small">误差线：种子间样本标准差。n 为每种子案例数，共 203 个固定合成测试配对。</text>
+</svg>

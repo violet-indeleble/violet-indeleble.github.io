@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">GTCM-Net 固定合成测试配对上的主结果</title>
+  <desc id="desc">203个固定合成测试配对，5个训练种子。平均信噪比增益6.640正负0.205dB，事件NRMSE中位数0.20221正负0.00275，平均Pearson相关系数0.94805正负0.00171。三个指标均报告跨训练种子的均值与样本标准差；NRMSE每次运行先取事件内中位数，再取事件间中位数，其余两项每次运行先按案例取均值。</desc>
+  <defs>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #183d36; }
+      .title { font-size: 42px; font-weight: 700; }
+      .subtitle { font-size: 28px; fill: #526b62; }
+      .label { font-size: 28px; font-weight: 700; }
+      .value { font-size: 56px; font-weight: 700; }
+      .spread { font-size: 30px; }
+      .small { font-size: 24px; fill: #526b62; }
+      .note { font-size: 26px; fill: #526b62; }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f8faf6"/>
+  <text x="60" y="77" class="title">固定配对测试结果</text>
+  <text x="60" y="127" class="subtitle">203 个固定合成测试配对 · 5 个训练种子</text>
+
+  <rect x="48" y="181" width="352" height="313" rx="24" fill="#ffffff" stroke="#dce6dc" stroke-width="2"/>
+  <rect x="424" y="181" width="352" height="313" rx="24" fill="#f2eff8" stroke="#d6cdea" stroke-width="2"/>
+  <rect x="800" y="181" width="352" height="313" rx="24" fill="#ffffff" stroke="#dce6dc" stroke-width="2"/>
+
+  <text x="80" y="243" class="label">平均信噪比增益</text>
+  <text x="80" y="329" class="value" style="fill:#197565">+6.640</text>
+  <text x="306" y="327" style="font-size:28px;fill:#197565">dB</text>
+  <text x="80" y="383" class="spread">± 0.205 dB</text>
+  <text x="80" y="449" class="small">每次运行按案例求均值</text>
+
+  <text x="456" y="243" class="label" style="fill:#6956b4">事件 NRMSE 中位数</text>
+  <text x="456" y="329" class="value" style="fill:#6956b4">0.20221</text>
+  <text x="456" y="383" class="spread" style="fill:#6956b4">± 0.00275</text>
+  <text x="456" y="449" class="small">按参考信号能量归一</text>
+
+  <text x="832" y="243" class="label">平均波形相关系数</text>
+  <text x="832" y="329" class="value" style="fill:#197565">0.94805</text>
+  <text x="832" y="383" class="spread">± 0.00171</text>
+  <text x="832" y="449" class="small">Pearson · 案例均值</text>
+
+  <text x="60" y="558" style="font-size:28px;font-weight:700">统计口径</text>
+  <text x="60" y="607" class="note">NRMSE：每次运行先取事件内中位数，再取事件间中位数。</text>
+  <text x="60" y="652" class="note">三个指标最终均报告 5 个训练种子间的均值 ± 样本标准差。</text>
+  <text x="60" y="703" class="small">依据论文表 4。结果限定于本研究的固定合成配对评价。</text>
+</svg>

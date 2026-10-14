@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">GTCM-Net 单通道微震降噪结构示意</title>
+  <desc id="desc">4000点单通道输入经残差编码，在瓶颈以输入条件门控融合非因果TCN与压缩双向Mamba，再经残差解码预测噪声残差。含噪输入减去预测噪声后得到重建波形。此图为结构示意，不含实测波形。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#197565"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #183d36; }
+      .title { font-size: 42px; font-weight: 700; }
+      .subtitle { font-size: 27px; fill: #526b62; }
+      .label { font-size: 28px; font-weight: 700; }
+      .small { font-size: 24px; fill: #526b62; }
+      .arrow { fill: none; stroke: #197565; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="760" fill="#f8faf6"/>
+  <text x="60" y="77" class="title">从单通道波形到噪声残差</text>
+  <text x="60" y="124" class="subtitle">GTCM-Net · 结构示意</text>
+
+  <rect x="48" y="180" width="1104" height="300" rx="26" fill="#ffffff" stroke="#dce6dc" stroke-width="2"/>
+  <rect x="76" y="250" width="180" height="150" rx="18" fill="#edf4ee"/>
+  <text x="166" y="294" class="label" text-anchor="middle">单通道输入</text>
+  <text x="166" y="337" class="small" text-anchor="middle">4000 点波形</text>
+  <text x="166" y="373" class="small" text-anchor="middle">4 kHz · 1 秒</text>
+  <path d="M 265 326 H 299" class="arrow"/>
+
+  <rect x="313" y="250" width="175" height="150" rx="18" fill="#edf4ee"/>
+  <text x="400" y="308" class="label" text-anchor="middle">残差编码</text>
+  <text x="400" y="352" class="small" text-anchor="middle">逐级下采样</text>
+  <path d="M 496 326 H 530" class="arrow"/>
+
+  <rect x="545" y="211" width="320" height="231" rx="18" fill="#f2eff8" stroke="#d6cdea" stroke-width="2"/>
+  <text x="705" y="251" class="label" text-anchor="middle" style="fill:#6956b4">瓶颈双分支</text>
+  <text x="705" y="295" class="small" text-anchor="middle">非因果 TCN</text>
+  <text x="705" y="333" class="small" text-anchor="middle">压缩双向 Mamba</text>
+  <rect x="570" y="363" width="270" height="54" rx="12" fill="#6956b4"/>
+  <text x="705" y="399" text-anchor="middle" style="font-size:26px;font-weight:700;fill:#ffffff">输入条件门控融合</text>
+  <path d="M 873 326 H 907" class="arrow"/>
+
+  <rect x="921" y="250" width="200" height="150" rx="18" fill="#edf4ee"/>
+  <text x="1021" y="308" class="label" text-anchor="middle">残差解码</text>
+  <text x="1021" y="352" class="small" text-anchor="middle">恢复时间分辨率</text>
+  <path d="M 1021 409 V 505" class="arrow"/>
+
+  <rect x="740" y="526" width="382" height="89" rx="18" fill="#e2efe8"/>
+  <text x="931" y="581" class="label" text-anchor="middle">预测噪声残差</text>
+  <text x="77" y="560" class="small">保留编码器与解码器的跳跃连接</text>
+  <text x="77" y="601" class="small">恢复样本尺度与物理量纲</text>
+
+  <rect x="48" y="650" width="1104" height="74" rx="18" fill="#183d36"/>
+  <text x="600" y="699" text-anchor="middle" style="font-size:32px;font-weight:700;fill:#ffffff">重建波形  =  含噪输入  −  预测噪声</text>
+</svg>
